@@ -31,7 +31,7 @@ def get_connection() -> Connection:
     cred = Credentials.from_text_file(
         credfile)
     cnx: Connection = mysql.connector.connect(host=cred.host,
-                                              user=cred.user, password=cred.password, database=cred.database)
+                                              user=cred.user, password=cred.password, database=cred.database,port=3305)
     return cnx
 
 
